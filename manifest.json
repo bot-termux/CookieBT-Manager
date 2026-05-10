@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+
+  "name": "CookieBT Manager",
+  "short_name": "CookieBT",
+  "version": "1.1.0",
+
+  "description": "Professional browser cookie manager for importing, exporting, editing, filtering, and restoring website sessions.",
+
+  "author": "Fadhil Aziz | https://t.me/fadhilaziz",
+  "homepage_url": "https://github.com/bot-termux",
+
+  "minimum_chrome_version": "110",
+  "offline_enabled": true,
+
+  "permissions": [
+    "cookies",
+    "activeTab",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "action": {
+    "default_title": "Cookies Bot-Termux",
+    "default_popup": "popup.html",
+
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-meta">
+    <a href="https://github.com/bot-termux" target="_blank">github.com/bot-termux</a>
+    <a href="https://t.me/fadhilaziz" target="_blank">@fadhilaziz</a>
+  </div>
+
+  <div class="brand">
+    <img src="icons/icon128.png" alt="CookieBT">
+
+    <div class="brand-text">
+      <h3>CookieBT Manager</h3>
+      <span>Professional Cookie Toolkit</span>
+    </div>
+  </div>
+
+  <label class="check">
+    <input type="checkbox" id="advancedMode">
+    Advanced: load all cookies
+  </label>
+
+  <input id="search" placeholder="Search domain / Name cookie...">
+<!--
+<select id="sort">
+  <option value="domain">Sort Domain</option>
+  <option value="name">Sort Name</option>
+  <option value="expiry">Sort Expired</option>
+  <option value="secure">Secure First</option>
+</select>
+-->
+
+  <div class="actions">
+    <button id="refresh">Refresh</button>
+    <button id="export">Export</button>
+  </div>
+
+  <div class="actions">
+    <button id="copyCurrent">Copy Cookie Web Ini</button>
+    <button id="importBtn">Import dari Box</button>
+  </div>
+  
+  
+  <textarea id="exportBox" placeholder="Paste cookies here: JSON, header, name=value, or Netscape format" spellcheck="false"></textarea>
+
+  <div id="count"></div>
+  <div id="list"></div>
+  <div class="footer">
+    CookieBT Manager V.1.1.0 • by bot-termux
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
