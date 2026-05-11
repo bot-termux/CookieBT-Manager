@@ -16,12 +16,16 @@
   "permissions": [
     "cookies",
     "activeTab",
-    "tabs"
+    "tabs",
+    "sidePanel"
   ],
-
   "host_permissions": [
     "<all_urls>"
   ],
+  
+  "side_panel": {
+    "default_path": "popup.html"
+  },
 
   "icons": {
     "16": "icons/icon16.png",
@@ -33,6 +37,7 @@
   "action": {
     "default_title": "Cookies Bot-Termux",
     "default_popup": "popup.html",
+    
 
     "default_icon": {
       "16": "icons/icon16.png",
