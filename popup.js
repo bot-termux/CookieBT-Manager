@@ -520,6 +520,33 @@ function flash(button, text) {
   }, 1000);
 }
 
+
+const pinSidebar = document.getElementById("pinSidebar");
+
+if (pinSidebar) {
+  pinSidebar.onchange = async () => {
+
+    if (pinSidebar.checked) {
+
+      await chrome.sidePanel.setOptions({
+        path: "popup.html",
+        enabled: true
+      });
+
+      await chrome.sidePanel.open({
+        windowId: (await chrome.windows.getCurrent()).id
+      });
+
+    } else {
+
+      await chrome.sidePanel.setOptions({
+        enabled: false
+      });
+
+    }
+  };
+}
+
 document.getElementById("search").oninput = render;
 const sortEl = document.getElementById("sort");
 if (sortEl) sortEl.onchange = render;
