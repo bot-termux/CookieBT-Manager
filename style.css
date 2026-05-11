@@ -33,59 +33,112 @@ body {
 ========================= */
 
 .top-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 10px;
-
-  font-size: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 8px;
 }
 
 .top-meta a {
+  display: block;
+  padding: 6px 8px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 9px;
   color: var(--muted);
   text-decoration: none;
+  text-align: center;
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .top-meta a:hover {
   color: var(--orange);
+  border-color: rgba(255, 123, 0, 0.45);
 }
 
-/* =========================
-   BRAND
-========================= */
-
 .brand {
-  display: flex;
+  display: grid;
+  grid-template-columns: 40px 1fr;
   align-items: center;
   gap: 10px;
 
-  padding: 10px 12px;
-  margin-bottom: 12px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
 
   background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 13px;
 }
 
 .brand img {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
+}
+
+.brand-text {
+  min-width: 0;
 }
 
 .brand-text h3 {
   margin: 0;
   font-size: 15px;
   font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .brand-text span {
   display: block;
   margin-top: 2px;
-
   color: var(--muted);
   font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.checks-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+
+.check-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  min-width: 0;
+  padding: 9px 8px;
+
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.check-box input {
+  width: auto;
+  margin: 0;
+  accent-color: var(--orange);
+}
+
+.check-box span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* =========================
@@ -307,4 +360,8 @@ button:hover {
   min-height: 64px;
   max-height: 120px;
   font-size: 11px;
+}
+
+#pinSidebar {
+  width: auto;
 }
